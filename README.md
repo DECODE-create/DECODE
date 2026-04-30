@@ -1,13 +1,17 @@
 # DECODE
 Gene-specific reads were identified by matching the first 10 nucleotides of each reference sequence (allowing one mismatch), and their relative abundance was calculated as the proportion of reads assigned to each gene among all aligned reads.
-## Dependencies
+### Software Dependencies
 
-- Python 3.6 or higher
-- Standard library only (no pip install needed)
+| Software | Version Tested | Minimum Version |
+|----------|---------------|-----------------|
+| Python | 3.6, 3.7, 3.8, 3.9, 3.10 | 3.6 |
+| BWA | 0.7.17 | 0.7.12 |
+| SAMtools | 1.9, 1.10, 1.11 | 1.9 |
 
-Built-in modules used:
-- os, sys, argparse, re, typing, collections
-## Directory Structure
+### Python Dependencies (Standard Library Only)
+No external pip packages required. Uses built-in modules:
+- `os`, `sys`, `argparse`, `re`, `typing`, `collections`
+
 ## Directory Structure
 
 **workdir/**
