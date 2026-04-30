@@ -50,8 +50,8 @@ index/ref.fa
 bwa index index/ref.fa
 
 # Create gene reference files
--gene_NC.txt 
--gene_treat.txt 
+gene_NC.txt 
+gene_treat.txt 
 
 # Create sample list
 cat > list << 'EOF'
@@ -59,8 +59,8 @@ example
 EOF
 
 # Create demo FASTQ files
--01.data/example.R1.fastq 
--01.data/example.R2.fastq 
+01.data/example.R1.fastq 
+01.data/example.R2.fastq 
 
 # Run gene extraction
 ../gene_extract.sh
