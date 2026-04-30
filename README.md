@@ -37,6 +37,37 @@ No external pip packages required. Uses built-in modules:
 
 **Slow internet connection (< 10 Mbps):** Allow 10-15 minutes for dependency downloads.
 
+### Run with Example Data
+
+# Create demo directory
+mkdir -p demo_workdir/{01.data,02.bwa,index}
+cd demo_workdir
+
+# Create reference genome
+index/ref.fa 
+
+# Build BWA index
+bwa index index/ref.fa
+
+# Create gene reference files
+gene_NC.txt 
+gene_treat.txt 
+
+# Create sample list
+cat > list << 'EOF'
+example
+EOF
+
+# Create demo FASTQ files
+01.data/example.R1.fastq 
+01.data/example.R2.fastq 
+
+# Run gene extraction
+../gene_extract.sh
+
+# Run gene counting
+python3 ../gene_count.py --workdir . --mismatch 1 --include-mismatch
+
 ## Directory Structure
 
 **workdir/**
